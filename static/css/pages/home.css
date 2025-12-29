@@ -253,7 +253,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   padding: 0.4rem 0.6rem;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   white-space: nowrap;
 
   opacity: 0;
