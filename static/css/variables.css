@@ -1,0 +1,53 @@
+/* ================================
+   DESIGN TOKENS & THEMES
+================================ */
+
+:root {
+  /* Fonts */
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast: 150ms;
+  --t-med: 250ms;
+}
+
+/* -------- LIGHT THEME -------- */
+[data-theme="light"] {
+  --bg-main: #f6f4f1;
+  --bg-alt: #ffffff;
+
+  --text-main: #111111;
+  --text-muted: #555555;
+
+  --border-subtle: #e0e0e0;
+
+  --accent: #ff3b0a;
+  --accent-soft: #000000;
+}
+
+/* -------- DARK THEME -------- */
+[data-theme="dark"] {
+  --bg-main: #0e0e11;
+  --bg-alt: #15151a;
+
+  --text-main: #ededed;
+  --text-muted: #9a9a9a;
+
+  --border-subtle: #2a2a2a;
+
+  --accent: #4cc9f0;
+  --accent-soft: #1a3a46;
+}

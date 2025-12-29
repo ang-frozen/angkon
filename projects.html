@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Projects — Angkon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="static/css/variables.css">
+  <link rel="stylesheet" href="static/css/base.css">
+  <link rel="stylesheet" href="static/css/layout.css">
+  <link rel="stylesheet" href="static/css/components.css">
+  <link rel="stylesheet" href="static/css/pages/projects.css">
+
+</head>
+
+<body class="page-projects">
+
+  <!-- HEADER -->
+<header class="site-header container">
+
+  <a href="/" class="logo">
+    <span id="typewriter"></span>
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+    ☰
+  </button>
+
+  <nav class="nav" id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="education.html">Education</a>
+    <a href="research.html">Research</a>
+    <a href="experience.html">Experience</a>
+    <a href="awards.html">Awards</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="static/cv.pdf" target="_blank">CV</a>
+  </nav>
+
+  <button id="theme-toggle">◐</button>
+
+</header>
+
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- TITLE -->
+    <section class="section">
+      <h1>Projects</h1>
+    </section>
+
+    <!-- ================================= -->
+    <!-- HIGHLIGHTED MEGA PROJECT -->
+    <!-- ================================= -->
+    <section class="section highlight-project">
+
+      <h2>Highlighted Project</h2>
+
+      <h3>
+        IEEE R10 Robotics Competition — Autonomous Drone for Mosquito Breeding Zone Detection
+      </h3>
+
+      <p class="project-context">
+        International award-winning robotics project focused on autonomous perception, decision-making, and actuation.
+      </p>
+
+      <div class="highlight-grid">
+
+        <!-- Image -->
+        <div class="highlight-media">
+          <img src="static/media/drone.png" alt="Autonomous Drone Project" >
+        </div>
+
+        <!-- Video -->
+        <div class="highlight-media">
+          <iframe
+            src="https://www.youtube.com/embed/lEnsR593CQ0"
+            title="IEEE R10 Robotics Competition Project"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+
+      <ul class="project-points">
+        <li><b>Required Skills:</b> Robotics, Computer Vision, Deep Learning, Autonomous Navigation, Embedded Systems</li>
+        <li><b>Major Outcome:</b> Champion at IEEE R10 Robotics Competition (International)</li>
+        <li><b>Challenges Overcome:</b> Autonomous detection, real-time descent decision, no ground control dependency</li>
+      </ul>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- ALL PROJECTS (DROPDOWN) -->
+    <!-- ================================= -->
+    <details class="section-accordion" open>
+      <summary >Academic & Robotics Projects</summary>
+      <hr>
+
+      <div class="project-list">
+
+        <!-- PROJECT -->
+        <details class="project-card">
+          <summary>GPS Tracker and Location Database System for BUET Students (2021)</summary>
+          <ul>
+            <li><b>Required Skills:</b> Arduino, Raspberry Pi, Wireless Communication, Web Development</li>
+            <li><b>Major Outcome:</b> 90%+ accurate bus arrival prediction</li>
+            <li><b>Challenges Overcome:</b> Delay minimization, real-time data synchronization</li>
+          </ul>
+        </details>
+
+        <details class="project-card">
+          <summary>DL-based Automatic License Plate Detection System (2021)</summary>
+          <ul>
+            <li><b>Required Skills:</b> Python, PyTorch, YOLO, Transfer Learning, MATLAB</li>
+            <li><b>Major Outcome:</b> 85%+ detection accuracy in diverse conditions</li>
+            <li><b>Challenges Overcome:</b> Low-quality images, illumination variance</li>
+          </ul>
+        </details>
+
+        <details class="project-card">
+          <summary>Smart Trash Collector Integrated with AI (2022)</summary>
+          <ul>
+            <li><b>Required Skills:</b> Robotics, AI, Arduino, Raspberry Pi, AutoCAD, Fusion</li>
+            <li><b>Major Outcome:</b> Autonomous waste sorting and collection</li>
+            <li><b>Challenges Overcome:</b> Hardware-software integration, object classification</li>
+          </ul>
+        </details>
+
+        <details class="project-card">
+          <summary>Single Board Oscilloscope & Signal Generator (2023)</summary>
+          <ul>
+            <li><b>Required Skills:</b> Arduino, Sensors, Power Electronics</li>
+            <li><b>Major Outcome:</b> Multi-function low-cost diagnostic board</li>
+            <li><b>Challenges Overcome:</b> Signal noise, voltage stability</li>
+          </ul>
+        </details>
+
+        <details class="project-card">
+          <summary>Smart Bike Accident Detection & Alarm System (2023)</summary>
+          <ul>
+            <li><b>Required Skills:</b> Embedded Systems, Sensors, Microcontrollers</li>
+            <li><b>Major Outcome:</b> Real-time accident detection with emergency alerts</li>
+            <li><b>Challenges Overcome:</b> False positive reduction, sensor fusion</li>
+          </ul>
+        </details>
+
+        <details class="project-card">
+          <summary>Delivery Drone with Arduino (2024)</summary>
+          <ul>
+            <li><b>Required Skills:</b> Robotics, Arduino, Sensors, Control Systems</li>
+            <li><b>Major Outcome:</b> Autonomous navigation and obstacle avoidance</li>
+            <li><b>Challenges Overcome:</b> Stability control, real-time sensing</li>
+          </ul>
+        </details>
+
+      </div>
+    </details>
+
+    <!-- ================================= -->
+    <!-- ONGOING PROJECTS -->
+    <!-- ================================= -->
+    <details class="section-accordion">
+      <summary>Currently Ongoing Projects</summary>
+      <hr>
+
+      <ul class="ongoing-list">
+        <li>AI-assisted disaster response using drones and IoT</li>
+        <li>LORA-based directives for flood disaster management</li>
+        
+        
+      </ul>
+    </details>
+
+  </main>
+
+  <script src="static/js/theme.js"></script>
+  <script src="static/js/nav.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Education — Angkon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="static/css/variables.css">
+  <link rel="stylesheet" href="static/css/base.css">
+  <link rel="stylesheet" href="static/css/layout.css">
+  <link rel="stylesheet" href="static/css/components.css">
+  <link rel="stylesheet" href="static/css/pages/education.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body class="page-education">
+
+<header class="site-header container">
+
+  <a href="/" class="logo">
+    <span id="typewriter"></span>
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+    ☰
+  </button>
+
+  <nav class="nav" id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="education.html" class="active">Education</a>
+    <a href="research.html">Research</a>
+    <a href="experience.html">Experience</a>
+    <a href="awards.html">Awards</a>
+    <a href="projects.html">Projects</a>
+    <a href="static/cv.pdf" target="_blank">CV</a>
+  </nav>
+
+  <button id="theme-toggle">◐</button>
+
+</header>
+
+
+
+<main class="container">
+
+  <section class="section">
+    <h1>Education</h1>
+  </section>
+
+  <section class="section">
+
+    <div class="timeline">
+
+      <!-- MSc -->
+      <!-- 
+
+      <div class="timeline-item">
+        <div class="timeline-year">2023 – Present</div>
+        <div class="timeline-content">
+          <h2>MSc in Electrical & Electronic Engineering</h2>
+          <p class="institution">University Name</p>
+          <p class="details">
+            Focus: Deep Learning, Signal Processing, AI Systems
+          </p>
+        </div>
+      </div>
+
+       -->
+
+      <!-- BSc -->
+      <div class="timeline-item">
+        <div class="timeline-year">2019 – 2024</div>
+        <div class="timeline-content">
+          <h2>BSc in Electrical & Electronic Engineering</h2>
+          <p class="institution">Bangladesh University of Engineering and Technology </p>
+          <p class="details">
+            Graduated with CGPA 3.74
+          </p>
+          <p class="details">
+            Final Year Major: Communication and Signal Processing
+          </p>
+          <p class="details">
+            Thesis: Deep Learning based Speech Enhancement in both supervised and unsupervised environments under heavy colored noise (up to -15dB)
+          </p>
+          <p class="details">
+            Thesis Outcomes: <br>
+            • Published 1 Conference paper in reputed international conference (IEEE R10 Flagship Conference (TENCON)) <br>
+            • One Journal paper under review <br>
+            • Visit <a href="https://carunet-se.streamlit.app/">https://carunet-se.streamlit.app/</a> for the results on supervised speech enhancement <br>
+
+          </p>
+          <p class="courses">
+            <b>Relevant Courses:</b> Robotics and Automation(EEE403, EEE404), Control Systems, Digital Signal Processing, Communication Systems, Microprocessors and Embedded Systems, Wireless and Broadband Communication, Computer Networks, etc.
+          </p>
+        </div>
+          <div class="cgpa-chart-container">
+            <canvas id="cgpaChart" height="120"></canvas>
+          </div>
+
+      </div>
+
+      <!-- HSC -->
+      <div class="timeline-item">
+        <div class="timeline-year">2016 – 2018</div>
+        <div class="timeline-content">
+          <h2>Higher Secondary Certificate (HSC)</h2>
+          <p class="institution">Government PC College, Bagerhat</p>
+          <p class="details">
+            Major: Science
+          </p>
+          <p class="details">
+            GPA: 5.00 with Scholarship
+          </p>
+        </div>
+      </div>
+
+      <!-- SSC -->
+      <div class="timeline-item">
+        <div class="timeline-year">2015 – 2016</div>
+        <div class="timeline-content">
+          <h2>Secondary School Certificate (SSC)</h2>
+          <p class="institution">Bagerhat Government High School, Bagerhat</p>
+          <p class="details">
+            Major: Science
+          </p>
+          <p class="details">
+            GPA: 5.00 with Scholarship
+          </p>
+        </div>
+      </div>
+      <!-- JSC -->
+      <div class="timeline-item">
+        <div class="timeline-year">2013</div>
+        <div class="timeline-content">
+          <h2>Junior School Certificate (JSC)</h2>
+          <p class="institution">Bagerhat Government High School, Bagerhat</p>
+          <p class="details">
+            GPA: 5.00 with Scholarship
+          </p>
+        </div>
+      </div>
+      <!-- PSC-->
+      <div class="timeline-item">
+        <div class="timeline-year">2010</div>
+        <div class="timeline-content">
+          <h2>Primary School Certificate (PSC)</h2>
+          <p class="institution">Bagerhat Government Primary School, Bagerhat</p>
+          <p class="details">
+            GPA: 5.00 with Scholarship
+          </p>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+</main>
+<script src="static/js/theme.js"></script>
+<script src="static/js/nav.js"></script>
+
+<script>
+const ctx = document.getElementById('cgpaChart');
+
+if (ctx) {
+  const getThemeColor = () =>
+    getComputedStyle(document.documentElement)
+      .getPropertyValue('--accent')
+      .trim();
+
+  const cgpaChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [
+        'L1-T1', 'L2-T1',
+        'L1-T2', 'L2-T2',
+        'L1-T3', 'L2-T3',
+        'L1-T4', 'L2-T4'
+      ],
+      datasets: [{
+        label: 'CGPA Progression',
+        data: [
+          3.48, 3.68,
+          3.76, 3.64,
+          3.72, 3.76,
+          3.86, 3.94
+        ], // 👈 replace with your real values
+        borderColor: getThemeColor(),
+        backgroundColor: 'transparent',
+        tension: 0.3,
+        pointRadius: 4,
+        pointHoverRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        title: {
+          display: true,
+          text: 'CGPA Progression (BSc)',
+          align: 'start',
+          font: {
+            size: 14,
+            weight: '500'
+          },
+          padding: {
+            bottom: 10
+          },
+    color: getComputedStyle(document.documentElement)
+      .getPropertyValue('--text-main')
+      .trim()
+  }
+},
+
+      scales: {
+        y: {
+          min: 3.0,
+          max: 4,
+          ticks: {
+            stepSize: 0.5
+          }
+        }
+      }
+    }
+  });
+
+  // Update color when theme changes
+  const observer = new MutationObserver(() => {
+  cgpaChart.data.datasets[0].borderColor = getThemeColor();
+  cgpaChart.options.plugins.title.color =
+    getComputedStyle(document.documentElement)
+      .getPropertyValue('--text-main')
+      .trim();
+    cgpaChart.update();
+  });
+
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+  });
+}
+</script>
+
+</body>
+</html>

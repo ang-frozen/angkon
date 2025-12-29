@@ -1,0 +1,91 @@
+/* ================================
+   AWARDS PAGE
+================================ */
+
+.page-awards h1 {
+  font-size: 2.4rem;
+  margin-bottom: var(--space-xl);
+}
+
+.page-awards h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-lg);
+}
+
+/* ================================
+   TIMELINE (reuse style)
+================================ */
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  max-width: 900px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-subtle);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--space-xl);
+  padding-left: var(--space-lg);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -0.6rem;
+  top: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timeline-year {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: var(--space-xs);
+}
+
+.timeline-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.org {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.timeline-content ul {
+  padding-left: 1.1rem;
+}
+
+.timeline-content li {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+/* ================================
+   TRAVEL GRANTS
+================================ */
+
+.grant-list {
+  max-width: 700px;
+  padding-left: 1.2rem;
+}
+
+.grant-list li {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}

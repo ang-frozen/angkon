@@ -1,0 +1,176 @@
+/* ================================
+   HOME — HERO SECTION
+================================ */
+
+.hero-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* ----------------
+   Profile Image
+----------------- */
+.hero-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--border-subtle);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ----------------
+   Name & Titles
+----------------- */
+.hero-intro h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.designation {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+/* ----------------
+   Taglines
+----------------- */
+.tagline {
+  max-width: 720px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+
+.tagline.muted {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ================================
+   HOME — SUMMARY
+================================ */
+
+.home-summary {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-main);
+}
+
+/* ================================
+   HOME — EXPLORE SECTION
+================================ */
+
+.explore-section {
+  margin-top: 3rem;
+}
+
+.explore-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+/* Grid */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Card */
+.explore-card {
+  position: relative;
+  padding: 1.6rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-main);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Accent bar */
+/* Accent line (animated) */
+.explore-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.35s ease;
+}
+
+/* Animate on hover */
+.explore-card:hover::before {
+  transform: scaleY(1);
+}
+
+
+/* Label */
+.explore-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+  display: inline-block;
+}
+
+/* Card title */
+.explore-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Card description */
+.explore-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .hero-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-intro h1 {
+    font-size: 2rem;
+  }
+
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+}

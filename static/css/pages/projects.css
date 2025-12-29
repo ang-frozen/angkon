@@ -1,0 +1,170 @@
+/* ================================
+   PROJECTS PAGE
+================================ */
+
+.page-projects h1 {
+  font-size: 2.4rem;
+  margin-bottom: var(--space-xl);
+}
+
+.page-projects h2 {
+  font-size: 1.6rem;
+  margin-bottom: var(--space-md);
+}
+
+/* ================================
+   HIGHLIGHT PROJECT
+================================ */
+
+.highlight-project h3 {
+  font-size: 1.3rem;
+  margin-bottom: var(--space-sm);
+}
+
+.project-context {
+  max-width: 700px;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.highlight-media img {
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
+.highlight-media iframe {
+  width: 100%;
+  height: 260px;
+  border-radius: var(--radius-md);
+}
+
+/* Project highlight bullet points */
+.project-points {
+  padding-left: 1.2rem;
+  max-width: 800px;
+}
+
+.project-points li {
+  margin-bottom: 6px;
+}
+
+/* ================================
+   SECTION ACCORDIONS
+================================ */
+
+.section-accordion {
+  margin-bottom: var(--space-xl);
+}
+
+/* ONLY section titles */
+.section-accordion > summary {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;        /* BIG */
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  color: var(--text-main);
+}
+
+.section-accordion > summary::-webkit-details-marker {
+  display: none;
+}
+
+.section-accordion > summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
+}
+
+.section-accordion[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.section-accordion hr {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+/* ================================
+   PROJECT LIST
+================================ */
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Individual project container */
+.project-card {
+  margin-left: 1.4rem;
+}
+
+/* ONLY project titles */
+.project-card > summary {
+  cursor: pointer;
+  font-size: 0.95rem;       /* SMALLER */
+  font-family: var(--font-main);
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.project-card > summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-card > summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform 0.2s ease;
+}
+
+.project-card[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.project-card ul {
+  padding-left: 1.2rem;
+  margin-top: var(--space-sm);
+}
+
+.project-card li {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+/* ================================
+   ONGOING PROJECTS
+================================ */
+
+.ongoing-list {
+  padding-left: 1.2rem;
+}
+
+.ongoing-list li {
+  margin-bottom: 6px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-media iframe {
+    height: 220px;
+  }
+}

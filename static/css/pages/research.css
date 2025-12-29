@@ -1,0 +1,154 @@
+/* ================================
+   RESEARCH PAGE BASE
+================================ */
+
+.page-research h1 {
+  font-size: 2.4rem;
+  margin-bottom: var(--space-xl);
+}
+
+.page-research h2 {
+  font-size: 1.4rem;
+  margin-bottom: var(--space-md);
+}
+
+/* ================================
+   INTEREST TAGS
+================================ */
+
+.interest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.interest {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.scholar-link {
+  margin-top: var(--space-md);
+  font-size: 0.95rem;
+}
+
+/* ================================
+   PUBLICATION LIST
+================================ */
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.pub-item h3 {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-xs);
+}
+
+.pub-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+/* ================================
+   PUBLICATION DETAILS DROPDOWN
+================================ */
+
+.pub-details {
+  margin-top: var(--space-sm);
+  border-left: 2px solid var(--border-subtle);
+  padding-left: var(--space-sm);
+}
+
+.pub-details summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--accent);
+  list-style: none;
+}
+
+.pub-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.pub-details summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform 0.2s ease;
+}
+
+.pub-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.pub-details ul {
+  margin: var(--space-sm) 0;
+  padding-left: 1.1rem;
+}
+
+.pub-details li {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.pub-links {
+  font-size: 0.85rem;
+  margin-top: var(--space-sm);
+}
+
+/* ================================
+   SECTION ACCORDIONS
+================================ */
+
+.section-accordion {
+  margin-bottom: var(--space-xl);
+}
+
+.section-accordion summary {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  cursor: pointer;
+  list-style: none;
+  color: var(--text-main);
+}
+
+.section-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.section-accordion summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
+}
+
+.section-accordion[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.section-accordion hr {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+.empty-note {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-left: 1.4rem;
+}
+.key-points {
+  margin-top: var(--space-sm);
+  padding-left: 1.2rem;
+  font-size: 0.55rem;
+  color: brown;
+}
