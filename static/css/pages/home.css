@@ -215,11 +215,13 @@
 /* ================================
    CONTACT ICON STRIP (HOVER REVEAL)
 ================================ */
+/* ================================
+   CONTACT ICON STRIP (ROBUST)
+================================ */
 
 .contact-icons {
   margin-top: 0.8rem;
   margin-bottom: 1.6rem;
-
   display: flex;
   justify-content: center;
   gap: 1.2rem;
@@ -229,10 +231,8 @@
   position: relative;
   text-decoration: none;
   color: var(--text-main);
-
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
 }
 
 /* Icon */
@@ -241,53 +241,52 @@
   cursor: pointer;
 }
 
-/* Hidden text */
+/* Hidden text by default */
 .contact-text {
   position: absolute;
-  bottom: -2.4rem;
+  bottom: -2.6rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
 
   background: var(--bg-main);
   color: var(--text-main);
-
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
-
   padding: 0.4rem 0.6rem;
-  font-size: 1.5rem;
+  font-size: 0.95rem;
   white-space: nowrap;
 
   opacity: 0;
-  transform: translateY(6px);
   pointer-events: none;
-
   transition: opacity 0.2s ease, transform 0.2s ease;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-/* Reveal on hover */
-.contact-icon:hover .contact-text {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* ================================
+   DESKTOP (HOVER DEVICES)
+================================ */
 
-/* Hover feedback */
-.contact-icon:hover .icon {
-  color: var(--accent);
+@media (hover: hover) {
+
+  .contact-icon:hover .contact-text {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .contact-icon:hover .icon {
+    color: var(--accent);
+  }
 }
 
 /* ================================
-   MOBILE BEHAVIOR
+   TOUCH DEVICES (NO HOVER)
 ================================ */
 
-/* On mobile: always show text (no hover) */
-@media (max-width: 768px) {
+@media (hover: none) {
+
   .contact-icons {
     flex-direction: column;
     gap: 0.6rem;
-  }
-
-  .contact-icon {
-    gap: 0.5rem;
   }
 
   .contact-text {
@@ -298,6 +297,5 @@
     box-shadow: none;
     border: none;
     padding: 0;
-    font-size: 0.95rem;
   }
 }
